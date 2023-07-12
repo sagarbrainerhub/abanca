@@ -6,34 +6,35 @@ import {
 } from 'react-native-responsive-screen';
 
 import {Colors} from '../assets/theme/Colors';
-import {RoundIcon, VisaCard} from '../components';
+import {RoundIcon, TitleHeader, VisaCard} from '../components';
 import {PrimaryText, SecondaryText} from '../assets/theme/fonts';
 
 const CardsScreen = () => {
   return (
-    <ScrollView
-      contentContainerStyle={styles.container}
-      showsVerticalScrollIndicator={false}>
-      <PrimaryText text="My Cards" />
+    <>
+      <TitleHeader title="My Cards" />
+      <ScrollView
+        contentContainerStyle={styles.container}
+        showsVerticalScrollIndicator={false}>
+        <VisaCard />
 
-      <VisaCard />
+        <VisaCard />
 
-      <VisaCard />
+        <TouchableOpacity style={styles.addNewItem}>
+          <RoundIcon
+            backgroundColor={Colors.green}
+            iconName="plus"
+            iconType="AntDesign"
+          />
 
-      <TouchableOpacity style={styles.addNewItem}>
-        <RoundIcon
-          backgroundColor={Colors.green}
-          iconName="plus"
-          iconType="AntDesign"
-        />
-
-        <SecondaryText
-          text="New Card"
-          color={Colors.primaryColor}
-          style={{marginLeft: widthPercentageToDP(3), fontWeight: '600'}}
-        />
-      </TouchableOpacity>
-    </ScrollView>
+          <SecondaryText
+            text="New Card"
+            color={Colors.primaryColor}
+            style={{marginLeft: widthPercentageToDP(3), fontWeight: '600'}}
+          />
+        </TouchableOpacity>
+      </ScrollView>
+    </>
   );
 };
 

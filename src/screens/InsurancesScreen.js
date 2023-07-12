@@ -6,26 +6,28 @@ import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
-import {AddnewItem} from '../components';
+import {AddnewItem, TitleHeader} from '../components';
 
 const InsurancesScreen = () => {
   return (
-    <View style={styles.container}>
-      <PrimaryText text="My Insurances" />
+    <>
+      <TitleHeader title="My Insurances" />
 
-      <Image
-        source={{
-          uri: 'https://media.istockphoto.com/id/1203356985/vector/car-insurance-banner-concept-vector-illustration.jpg?s=170667a&w=0&k=20&c=P_JtkCAPAg2cAy_GWGi5CWcu2y-0eqZC3Mj_zN2ksPA=',
-        }}
-        style={styles.banner}
-      />
+      <View style={styles.container}>
+        <Image
+          source={{
+            uri: 'https://media.istockphoto.com/id/1203356985/vector/car-insurance-banner-concept-vector-illustration.jpg?s=170667a&w=0&k=20&c=P_JtkCAPAg2cAy_GWGi5CWcu2y-0eqZC3Mj_zN2ksPA=',
+          }}
+          style={styles.banner}
+        />
 
-      <AddnewItem
-        title="You don't have any insurance yet"
-        description="Find out the benifits of ABANCA insurance plan"
-        linkText="find yours"
-      />
-    </View>
+        <AddnewItem
+          title="You don't have any insurance yet"
+          description="Find out the benifits of ABANCA insurance plan"
+          linkText="find yours"
+        />
+      </View>
+    </>
   );
 };
 
@@ -35,7 +37,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.white,
-    paddingTop: heightPercentageToDP(2),
     paddingHorizontal: widthPercentageToDP(3),
   },
   banner: {

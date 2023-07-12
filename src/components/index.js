@@ -9,3 +9,4 @@ export {default as CommingSoon} from './CommingSoon';
 export {default as RoundIcon} from './RoundIcon';
 export {default as AddnewItem} from './AddnewItem';
 export {default as VisaCard} from './VisaCard';
+export {default as TitleHeader} from './TitleHeader';

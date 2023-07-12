@@ -2,7 +2,7 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {Colors} from '../assets/theme/Colors';
-import {AmmountCard, Loader, OpreatorCard} from '../components';
+import {AmmountCard, Loader, OpreatorCard, TitleHeader} from '../components';
 import {
   heightPercentageToDP,
   widthPercentageToDP,
@@ -48,21 +48,22 @@ const Accounts = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <PrimaryText text="My Accounts" />
+    <>
+      <TitleHeader title="My Accounts" />
 
-      <AmmountCard
-        style={styles.ammountCard}
-        balanceAmmount="19 661,38"
-        accountType="PERSONAL"
-        onOpreatePress={() => {
-          refRBSheet.current.open();
-        }}
-        onPress={() => {
-          navigation.navigate('AccountHistory');
-        }}
-      />
-      {/* 
+      <View style={styles.container}>
+        <AmmountCard
+          style={styles.ammountCard}
+          balanceAmmount="19 661,38"
+          accountType="PERSONAL"
+          onOpreatePress={() => {
+            refRBSheet.current.open();
+          }}
+          onPress={() => {
+            navigation.navigate('AccountHistory');
+          }}
+        />
+        {/* 
       <AmmountCard
         style={styles.ammountCard}
         balanceAmmount="00.00"
@@ -75,15 +76,16 @@ const Accounts = () => {
         }}
       /> */}
 
-      <BottomSheet
-        refRBSheet={refRBSheet}
-        height={heightPercentageToDP(60)}
-        title="Operations">
-        <BottomSheet_Content />
-      </BottomSheet>
+        <BottomSheet
+          refRBSheet={refRBSheet}
+          height={heightPercentageToDP(60)}
+          title="Operations">
+          <BottomSheet_Content />
+        </BottomSheet>
 
-      {loader && <Loader />}
-    </View>
+        {loader && <Loader />}
+      </View>
+    </>
   );
 };
 

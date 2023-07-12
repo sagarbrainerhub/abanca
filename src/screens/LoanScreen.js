@@ -1,7 +1,7 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {Colors} from '../assets/theme/Colors';
-import {AddnewItem, CommingSoon} from '../components';
+import {AddnewItem, CommingSoon, TitleHeader} from '../components';
 import {PrimaryText} from '../assets/theme/fonts';
 import {
   heightPercentageToDP,
@@ -10,16 +10,18 @@ import {
 
 const LoanScreen = () => {
   return (
-    <View style={styles.container}>
-      <PrimaryText text="My Loan" />
+    <>
+      <TitleHeader title="My Loan" />
 
-      <AddnewItem
-        style={styles.itemCard}
-        title="You have no loans with ABANCA"
-        description="We have the financing method that best suits your needs"
-        linkText="More information"
-      />
-    </View>
+      <View style={styles.container}>
+        <AddnewItem
+          style={styles.itemCard}
+          title="You have no loans with ABANCA"
+          description="We have the financing method that best suits your needs"
+          linkText="More information"
+        />
+      </View>
+    </>
   );
 };
 
