@@ -7,3 +7,5 @@ export {default as CommenHeader} from './CommenHeader';
 export {default as HistoryCard} from './HistoryCard';
 export {default as CommingSoon} from './CommingSoon';
 export {default as RoundIcon} from './RoundIcon';
+export {default as AddnewItem} from './AddnewItem';
+export {default as VisaCard} from './VisaCard';

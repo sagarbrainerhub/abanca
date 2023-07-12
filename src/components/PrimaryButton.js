@@ -8,7 +8,15 @@ import {
 import {Colors} from '../assets/theme/Colors';
 
 const PrimaryButton = props => {
-  const {backgroundColor, textColor, onPress, buttonText, style} = props;
+  const {
+    backgroundColor,
+    textColor,
+    onPress,
+    buttonText,
+    style,
+    borderWidth,
+    borderColor,
+  } = props;
 
   return (
     <TouchableOpacity
@@ -21,9 +29,12 @@ const PrimaryButton = props => {
             backgroundColor === undefined
               ? Colors.primaryColor
               : backgroundColor,
+          borderWidth: borderWidth,
+          borderColor: borderColor,
         },
       ]}>
       <SecondaryText
+        style={{fontWeight: '500'}}
         text={buttonText}
         color={textColor === undefined ? Colors.white : textColor}
       />
@@ -38,7 +49,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     paddingHorizontal: widthPercentageToDP(4),
     paddingVertical: heightPercentageToDP(0.5),
-    borderRadius: 6,
+    borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
   },
