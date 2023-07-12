@@ -6,3 +6,4 @@ export {default as Loader} from './Loader';
 export {default as CommenHeader} from './CommenHeader';
 export {default as HistoryCard} from './HistoryCard';
 export {default as CommingSoon} from './CommingSoon';
+export {default as RoundIcon} from './RoundIcon';

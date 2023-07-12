@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Colors} from '../assets/theme/Colors';
-import {CommingSoon} from '../components';
+import {CommingSoon, RoundIcon} from '../components';
 
 const CardsScreen = () => {
   return (
