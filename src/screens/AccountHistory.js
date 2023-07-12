@@ -75,7 +75,6 @@ const AccountHistory = () => {
           }}
         />
       </View>
-      <Text>test</Text>
     </View>
   );
 };
