@@ -46,6 +46,16 @@ export const OpreatorData = [
 export const AccountHistoryData = [
   {
     id: 1,
+    ammount: '21850',
+    date: '04 aug 2023',
+    type: 'received',
+    from: 'Received 21850 € from el corte',
+    icontype: 'FontAwesome',
+    iconName: 'money',
+    iconColor: 'green',
+  },
+  {
+    id: 1,
     ammount: '1500',
     date: '12 july 2023',
     type: 'withdrawal',
