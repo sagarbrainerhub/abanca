@@ -23,7 +23,7 @@ const AccountHistory = () => {
         <CommenHeader />
 
         <View style={styles.balanceView}>
-          <PrimaryText text={stealmode === false ? '19 661,38 €' : null} />
+          <PrimaryText text={stealmode === false ? '41 511,38 €' : null} />
           <TouchableOpacity
             onPress={() => {
               setStealmode(!stealmode);

@@ -54,7 +54,7 @@ const Accounts = () => {
       <View style={styles.container}>
         <AmmountCard
           style={styles.ammountCard}
-          balanceAmmount="19 661,38"
+          balanceAmmount="41 511,38"
           accountType="PERSONAL"
           onOpreatePress={() => {
             refRBSheet.current.open();
